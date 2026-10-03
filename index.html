@@ -7,26 +7,63 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Jaideep Gaur</h1>
-  <p>Data Science student. I turn messy data into clear answers.</p>
+  <div class="spotlight"></div>
 
-  <h2>Projects</h2>
-  <ul>
-    <li>NCR Real Estate Pipeline</li>
-  </ul>
+  <nav class="nav">
+    <div class="nav-links">
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+    </div>
+    <a class="cta" href="https://www.linkedin.com/in/jaideepgaur">Contact Me</a>
+  </nav>
 
-  <h2>Skills</h2>
+  <header class="hero">
+    <div class="hero-text">
+      <p class="hello">Hello,</p>
+      <h1>I am<br>Jaideep Gaur</h1>
+      <p class="tagline">Data Science student. I turn messy data into clear answers.</p>
+      <p class="roles">Data Analyst · Python · SQL</p>
+      <a class="btn" href="https://github.com/JAI944">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/jaideepgaur">LinkedIn</a>
+    </div>
+    <img class="avatar" src="dp.jpg" alt="Jaideep Gaur">
+  </header>
+
+  <section id="about" class="panel">
+    <h2>About Me</h2>
+    <p>Final-year B.Tech Data Science student. I build Python scrapers and cleaning pipelines, and I'm looking for an entry-level Data Analyst role.</p>
+  </section>
+
+  <h2 id="projects">Projects</h2>
+  <div class="card">
+    <h3>Naukri Job Market Scraper</h3>
+    <p>Job listings are hard to compare when you're scrolling page after page. I built a scraper that collects them automatically and turns them into a clean dataset: title, company, location, salary, rating, posted date and job link.</p>
+    <p><strong>Tools:</strong> Python, Selenium, BeautifulSoup</p>
+  </div>
+
+  <h2 id="skills">Skills</h2>
   <ul class="skills">
     <li>Python</li>
     <li>EDA</li>
     <li>SQL</li>
     <li>Excel</li>
     <li>Power BI</li>
-
   </ul>
 
-  <h2>Contact</h2>
-  <a class="btn" href="https://github.com/JAI944">GitHub</a>
-  <a class="btn" href="https://www.linkedin.com/in/jaideepgaur">LinkedIn</a>
+  <footer>Built by Jaideep Gaur</footer>
+
+  <script>
+  const spot = document.querySelector('.spotlight');
+
+  document.addEventListener('mousemove', (e) => {
+
+    spot.style.setProperty('--x', e.clientX + 'px');
+    spot.style.setProperty('--y', e.clientY + 'px');
+
+  });
+
+  </script>
+
 </body>
 </html>
